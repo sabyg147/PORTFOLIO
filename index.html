@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sabyasachi Ghosh – Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#141414;--surface:#1f1f1f;--text:#f3f3f3;--muted:#b3b3b3;--red:#e50914;--line:#333;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f5f5f1;--surface:#fff;--text:#141414;--muted:#555;--line:#d6d6d0;color-scheme:light}}
+:root[data-theme="dark"]{--bg:#141414;--surface:#1f1f1f;--text:#f3f3f3;--muted:#b3b3b3;--line:#333}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:400 16px/1.6 Inter,system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;align-items:center;gap:28px;padding:14px 4%;background:linear-gradient(var(--bg),transparent)}
+.logo{font:400 30px/1 'Bebas Neue',Impact,sans-serif;color:var(--red);letter-spacing:1px;text-decoration:none}
+nav a.l{font-size:14px;color:var(--muted);text-decoration:none}
+nav a.l:hover{color:var(--text)}
+.hero{min-height:78vh;display:flex;align-items:flex-end;padding:0 4% 8vh;margin-top:-60px;background:radial-gradient(ellipse at 75% 20%,#7a0b12 0,transparent 55%),radial-gradient(ellipse at 20% 80%,#1b2a4a 0,transparent 60%),var(--bg)}
+.hero>div{max-width:640px}
+.hero h1{font:400 clamp(56px,10vw,120px)/.95 'Bebas Neue',Impact,sans-serif;letter-spacing:1px}
+.hero p{font-size:18px;color:var(--text);margin:18px 0 26px;max-width:56ch}
+.btn{display:inline-block;padding:11px 26px;border-radius:4px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font-size:16px;font-family:inherit;margin-right:10px}
+.btn.p{background:#fff;color:#000}.btn.s{background:rgba(109,109,110,.7);color:#fff}
+.btn:hover{opacity:.85}
+.row{padding:28px 0 8px}
+.row h2{font:600 20px/1.3 Inter,sans-serif;padding:0 4%;margin-bottom:12px}
+.track{display:flex;gap:10px;overflow-x:auto;padding:6px 4% 22px;scroll-snap-type:x proximity}
+.card{flex:0 0 min(300px,72vw);aspect-ratio:16/10;border-radius:6px;border:0;color:#fff;text-align:left;padding:18px;cursor:pointer;display:flex;flex-direction:column;justify-content:flex-end;scroll-snap-align:start;position:relative;overflow:hidden;font-family:inherit;transition:transform .2s}
+.card:hover,.card:focus-visible{transform:scale(1.06);z-index:2}
+.card b{font:400 28px/1 'Bebas Neue',Impact,sans-serif;letter-spacing:.5px}
+.card span{font-size:13px;opacity:.9;margin-top:4px}
+.card::before{content:"";position:absolute;inset:0;background:linear-gradient(transparent 30%,rgba(0,0,0,.75))}
+.card>*{position:relative}
+.art{position:absolute;inset:0;opacity:.5;pointer-events:none}.art svg{width:100%;height:100%;display:block}
+.about{padding:36px 4% 8px;display:grid;gap:12px;max-width:760px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 4%}
+.chip{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px}
+.contact{padding:40px 4% 60px}
+dialog{border:0;border-radius:10px;padding:0;width:min(720px,94vw);max-height:90vh;background:var(--surface);color:var(--text);overflow:auto}
+dialog::backdrop{background:rgba(0,0,0,.75)}
+.banner{height:220px;display:flex;align-items:flex-end;padding:22px;position:relative;overflow:hidden}
+.banner h3{position:relative;font:400 clamp(40px,8vw,60px)/1 'Bebas Neue',Impact,sans-serif;color:#fff}
+.body{padding:22px}
+.body p{margin-bottom:14px;max-width:70ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 20px}
+.x{position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;border:0;background:#000a;color:#fff;font-size:20px;cursor:pointer}
+dialog .btn.s{background:var(--line);color:var(--text)}
+.tool{margin:0 4%;padding:22px;background:var(--surface);border:1px solid var(--line);border-radius:8px;max-width:760px}
+.tool h3{font:600 18px/1.3 Inter,sans-serif;margin-bottom:8px}
+.tool p,.tool li{color:var(--muted);margin-bottom:10px}
+.tool ol{padding-left:20px;margin-top:14px}
+.tool input{margin:10px 0;color:var(--text);max-width:100%}
+.sw{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px;margin-top:14px}
+.sw button{height:84px;border:0;border-radius:6px;font:600 14px Inter,sans-serif;cursor:pointer}
+#msg{min-height:1.5em;margin-top:10px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media (max-width:600px){nav a.l{display:none}.hero{min-height:70vh}}
+</style>
+</head>
+<body>
+<nav><a class="logo" href="#top">SABYASACHI GHOSH</a><a class="l" href="#interfaces">Interfaces</a><a class="l" href="#systems">Systems</a><a class="l" href="#tools">Tools for designers</a><a class="l" href="#skills">Skills</a><a class="l" href="#contact">Contact</a></nav>
+
+<header class="hero" id="top"><div>
+<h1>Sabyasachi Ghosh</h1>
+<p>Computer Science student (AI/ML) at SRM Institute of Science and Technology. I build machine learning products and make their results easy for people to read and trust.</p>
+<a class="btn p" href="#interfaces">Watch my work</a><a class="btn s" href="https://github.com/sabyg147" target="_blank" rel="noopener">GitHub</a>
+</div></header>
+
+<section class="row" id="interfaces"><h2>Interfaces people use</h2><div class="track" data-row="ui"></div></section>
+<section class="row" id="systems"><h2>Systems and models under the hood</h2><div class="track" data-row="sys"></div></section>
+
+<section class="row" id="tools"><h2>Tools for designers</h2><div class="tool">
+<h3>Palette Extractor</h3>
+<p>Problem: CMF and UI designers pull colors from reference photos by eye or by hand-picking pixels. This tool reads an image and lists its dominant colors as hex codes in seconds. It runs in your browser, so images are never uploaded.</p>
+<label for="img">Choose a reference image (PNG or JPG)</label><br>
+<input type="file" id="img" accept="image/*">
+<div class="sw" id="sw"></div><p id="msg" role="status"></p>
+<h3>How to use it</h3>
+<ol><li>Choose a photo, moodboard image or render.</li><li>Wait a moment for up to six dominant colors to appear.</li><li>Click a swatch to copy its hex code into Figma, Illustrator or your CMF sheet.</li></ol>
+</div></section>
+
+<section class="about" id="about"><h2>About</h2>
+<p>I work across Python, Java, C++, React and FastAPI, and train models with frameworks like XGBoost. My projects cover full-stack apps, ML pipelines and compiler design. I care about how a model’s output is shown to the person reading it: clear labels, honest confidence and nothing hidden.</p></section>
+
+<section class="row" id="skills"><h2>Skills</h2><div class="chips">
+<span class="chip">Python</span><span class="chip">Java</span><span class="chip">C++</span><span class="chip">React</span><span class="chip">FastAPI</span><span class="chip">Flask</span><span class="chip">Streamlit</span><span class="chip">RAPIDS</span><span class="chip">Dask</span><span class="chip">XGBoost</span><span class="chip">SHAP</span><span class="chip">PostgreSQL</span><span class="chip">Docker</span><span class="chip">UI/UX</span><span class="chip">Agile/Scrum</span></div></section>
+
+<section class="contact" id="contact"><h2>Contact</h2>
+<p style="margin:8px 0 16px;color:var(--muted)">Applying for the AI Generalist (Design) role at Ather Energy.</p>
+<a class="btn p" href="https://github.com/sabyg147" target="_blank" rel="noopener">github.com/sabyg147</a></section>
+
+<dialog id="dlg" aria-labelledby="dt"><button class="x" aria-label="Close">×</button><div class="banner" id="db"><h3 id="dt"></h3></div><div class="body"><div class="meta" id="dm"></div><div id="dp"></div><div id="dl"></div></div></dialog>
+
+<script>
+var P=[
+{id:"neuro",row:"ui",prob:"Reading raw EEG signals for mood disorders needs specialist skill, and results are hard to explain.",user:"Clinicians and students who want a screening result with the reasoning visible.",res:"Live app with an XGBoost model (AUC about 0.88) and an interpretable biomarker model.",title:"NeuroScan",tag:"EEG mood disorder detection",bg:"linear-gradient(135deg,#0b3d91,#6a1b9a)",
+ desc:["A deployed web app that screens EEG recordings for mood disorders. It started as a binary Healthy vs. Mood Disorder classifier and was rebuilt into a hierarchical model: first the main disorder, then the specific one.","The main model is XGBoost (AUC about 0.88) trained on the Kaggle BRMH EEG dataset. A second logistic regression model uses four engineered EEG features, so results can be explained.","The interface has seven sections: Overview, Dashboard & Users, EEG Predictor, AI Psychiatrist, Therapy Cost, ML Concepts and Clinical Research. The home screen reports 80.82% accuracy.","Models were trained in Google Colab, exported as .pkl files and served through a Flask app on Render."],
+ stack:["Python","XGBoost","SHAP","Flask","Render"],
+ links:[["Live app","https://eeg-neuroscan.onrender.com"],["Source code","https://github.com/sabyg147/EEG-PSYCHIATRIC-NEUROSCIENCE-APP"]]},
+{id:"hall",row:"ui",prob:"LLM answers sound confident even when they are wrong, so reviewers cannot tell what to trust.",user:"Anyone who has to check an AI answer before using it.",res:"A working pipeline that shows each check and flags answers the evidence does not support.",title:"Hallucination Detector",tag:"Check LLM answers against sources",bg:"linear-gradient(135deg,#7a0b12,#e65100)",
+ desc:["A Streamlit app that checks whether an LLM answer is supported by evidence. Answers pass through a cascade of LLaMA, then Qwen, then a RAG step on a ChromaDB store.","The interface shows each stage of the pipeline with diagrams, so a reader can see where an answer was confirmed or flagged."],
+ stack:["Python","Streamlit","ChromaDB","RAG","LLaMA","Qwen"],
+ links:[["Source code","https://github.com/sabyg147/LLM-HALLUCINATION-EVALUATION"]]},
+{id:"dsa",row:"ui",prob:"Interview prep is scattered across sheets and sites, so progress is hard to see.",user:"Students preparing for coding interviews.",res:"A dashboard with secure sign-in and charts of practice progress.",title:"DSA Tracker",tag:"Track interview prep progress",bg:"linear-gradient(135deg,#004d40,#1b5e20)",
+ desc:["A full-stack web app for tracking data structures and algorithms practice, with a dark-themed dashboard built on Chart.js.","The Express.js backend uses rotating JWTs, bcrypt password hashing, rate limiting and CORS rules."],
+ stack:["Node.js","Express","Chart.js","JWT"],links:[]},
+{id:"job",row:"sys",prob:"Background jobs fail, stall or run twice unless claiming, retries and worker health are handled carefully.",user:"Developers who need dependable task processing.",res:"Core API built with auth, queues and job management, plus retries and a dead letter queue.",title:"Distributed Job Scheduler",tag:"Reliable background jobs at scale",bg:"linear-gradient(135deg,#263238,#0d47a1)",
+ desc:["A production-style job scheduler built as a company assignment, with a layered design: API, auth, services, repositories, database and workers.","It supports atomic job claiming, retries, a dead letter queue, worker heartbeats, and JWT or API-key authentication. Alembic handles migrations, Docker handles packaging, and Swagger UI documents the API."],
+ stack:["FastAPI","SQLAlchemy","PostgreSQL","Alembic","Docker","Pydantic"],
+ links:[["Source code","https://github.com/sabyg147/distributed-job-scheduler"]]},
+{id:"agri",row:"sys",prob:"Farmers and traders lack an easy way to see where a commodity price is heading in their own district.",user:"Anyone choosing when to buy or sell a crop.",res:"Day-by-day price forecasts by state, district and commodity, compared against 2025 actuals.",title:"AgriCast",tag:"Crop price forecasts on a GPU",bg:"linear-gradient(135deg,#33691e,#f9a825)",
+ desc:["A real-time forecasting system for agricultural commodity prices. It trains a GPU-accelerated XGBoost model on historical market prices and serves daily predictions through a REST API and an interactive dashboard.","Pick a state, district, commodity and month (for example Tamil Nadu, Chengalpattu, Tomato, March 2026) to get a day-by-day forecast. The dashboard charts 2025 actual prices against 2026 predictions and shows mean, standard deviation, min/max, price range, a historical price distribution and a day-by-day comparison table.","The dashboard ran on Google Colab with a T4 GPU, exposed through an ngrok tunnel."],
+ stack:["NVIDIA RAPIDS","Dask","XGBoost","FastAPI","Python"],
+ links:[["Source code","https://github.com/sabyg147/AgriculturePrediction"]]}
+];
+var H='<svg viewBox="0 0 300 190" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" ';
+var A={
+ neuro:H+'fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M0 40Q15 10 30 40T60 40T90 40T120 40T150 40T180 40T210 40T240 40T270 40T300 40"/><path d="M0 80Q10 55 20 80T40 80T60 80T80 80T100 80T120 80T140 80T160 80T180 80T200 80T220 80T240 80T260 80T280 80T300 80" opacity=".7"/><path d="M0 120Q25 80 50 120T100 120T150 120T200 120T250 120T300 120" opacity=".5"/></svg>',
+ hall:H+'fill="none" stroke="#fff" stroke-width="2.5"><circle cx="60" cy="80" r="24"/><circle cx="150" cy="80" r="24"/><circle cx="240" cy="80" r="24"/><path d="M84 80H126M174 80H216"/><path d="M229 80l8 8 15-17" stroke-width="4"/><path d="M40 140H260" opacity=".4"/></svg>',
+ dsa:H+'fill="#fff"><rect x="40" y="110" width="30" height="60" opacity=".45"/><rect x="85" y="85" width="30" height="85" opacity=".55"/><rect x="130" y="60" width="30" height="110" opacity=".65"/><rect x="175" y="90" width="30" height="80" opacity=".55"/><rect x="220" y="40" width="30" height="130" opacity=".8"/></svg>',
+ job:H+'fill="none" stroke="#fff" stroke-width="2.5"><rect x="115" y="25" width="70" height="36" rx="6"/><path d="M150 61V95M150 95H55V125M150 95V125M150 95H245V125"/><rect x="30" y="125" width="50" height="30" rx="5"/><rect x="125" y="125" width="50" height="30" rx="5"/><rect x="220" y="125" width="50" height="30" rx="5"/></svg>',
+ agri:H+'fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="10,150 55,130 100,140 150,95 195,105"/><polyline points="195,105 240,60 292,40" stroke-dasharray="2 8"/><path d="M10 170H292" opacity=".4" stroke-width="2"/></svg>'
+};
+function art(id){var d=document.createElement("div");d.className="art";d.setAttribute("aria-hidden","true");d.innerHTML=A[id];return d}
+var dlg=document.getElementById("dlg");
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;return e}
+P.forEach(function(p){
+ var b=el("button","card");b.style.background=p.bg;b.setAttribute("aria-label","Open "+p.title);
+ b.appendChild(art(p.id));b.appendChild(el("b",0,p.title));b.appendChild(el("span",0,p.tag));
+ b.onclick=function(){open(p)};
+ document.querySelector('[data-row="'+p.row+'"]').appendChild(b);
+});
+function open(p){
+ document.getElementById("dt").textContent=p.title;
+ var db=document.getElementById("db");db.style.background=p.bg;var o=db.querySelector(".art");if(o)o.remove();db.insertBefore(art(p.id),db.firstChild);
+ var m=document.getElementById("dm");m.textContent="";p.stack.forEach(function(s){m.appendChild(el("span","chip",s))});
+ var d=document.getElementById("dp");d.textContent="";[["Problem",p.prob],["For",p.user],["Result",p.res]].forEach(function(r){var q=el("p");q.appendChild(el("strong",0,r[0]+": "));q.appendChild(document.createTextNode(r[1]));d.appendChild(q)});p.desc.forEach(function(t){d.appendChild(el("p",0,t))});
+ var l=document.getElementById("dl");l.textContent="";
+ p.links.forEach(function(k,i){var a=el("a","btn "+(i?"s":"p"),k[0]);a.href=k[1];a.target="_blank";a.rel="noopener";l.appendChild(a)});
+ dlg.showModal();
+}
+dlg.querySelector(".x").onclick=function(){dlg.close()};
+dlg.addEventListener("click",function(e){if(e.target===dlg)dlg.close()});
+(function(){var inp=document.getElementById("img"),sw=document.getElementById("sw"),msg=document.getElementById("msg");
+inp.addEventListener("change",function(){var f=inp.files[0];if(!f)return;var im=new Image(),u=URL.createObjectURL(f);
+im.onload=function(){var c=document.createElement("canvas");c.width=c.height=64;var x=c.getContext("2d");x.drawImage(im,0,0,64,64);URL.revokeObjectURL(u);
+var dt=x.getImageData(0,0,64,64).data,m={};
+for(var i=0;i<dt.length;i+=4){if(dt[i+3]<128)continue;var k=(dt[i]>>4)+","+(dt[i+1]>>4)+","+(dt[i+2]>>4);m[k]=(m[k]||0)+1}
+var arr=Object.keys(m).sort(function(a,b){return m[b]-m[a]}),pick=[];
+arr.forEach(function(k){if(pick.length>=6)return;var v=k.split(",").map(function(n){return n*16+8});
+if(pick.every(function(p){return Math.abs(p[0]-v[0])+Math.abs(p[1]-v[1])+Math.abs(p[2]-v[2])>60}))pick.push(v)});
+sw.textContent="";
+pick.forEach(function(v){var h="#"+v.map(function(n){return("0"+n.toString(16)).slice(-2)}).join("").toUpperCase();
+var b=document.createElement("button");b.style.background=h;b.style.color=(v[0]*.299+v[1]*.587+v[2]*.114)>150?"#000":"#fff";b.textContent=h;b.setAttribute("aria-label","Copy "+h);
+b.onclick=function(){try{navigator.clipboard.writeText(h);msg.textContent="Copied "+h}catch(e){msg.textContent=h}};sw.appendChild(b)});
+msg.textContent=pick.length?"Click a color to copy its hex code.":"No colors found."};
+im.onerror=function(){msg.textContent="That file isn’t an image. Try a PNG or JPG."};im.src=u})})();
+</script>
+</body>
+</html>
